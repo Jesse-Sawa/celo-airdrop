@@ -1,0 +1,38 @@
+{
+  "name": "celo-airdrop",
+  "version": "1.0.0",
+  "description": "A boilerplate guide to deploying an erc-20 token airdrop on Celo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesse-Sawa/celo-airdrop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesse-Sawa/celo-airdrop/issues"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "3.1.0",
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "axios": "^0.20.0",
+    "chai": "^4.2.0",
+    "commander": "^6.2.1",
+    "ethereum-waffle": "^3.0.0",
+    "ethereumjs-util": "^7.0.4",
+    "mocha": "^6.2.2",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.0",
+    "solc": "0.6.11",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@celo/contractkit": "^1.5.2",
+    "dotenv": "^16.0.0"
+  }
+}
