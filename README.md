@@ -122,15 +122,15 @@ Starting migrations...
 1_initial_migration.js
 ======================
 
-   Replacing 'Migrations'
+   Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0x875e0f90891f1f13dd496daf834e7845d6bb99c667c5d12be0c1eff7a916fddb
-   > Blocks: 0            Seconds: 4
-   > contract address:    0x0AB84f18f849CFaC49197aD804234e3aFeaEbBa3
-   > block number:        11041293
-   > block timestamp:     1650565018
+   > transaction hash:    0xa6f66270e128cfc1837f7874757029ebfae59bba4ffd7fe5589ed949390f6241
+   > Blocks: 1            Seconds: 4
+   > contract address:    0xA2b066d5603d7ef3E9BbAFe113A69A08983dBcB5
+   > block number:        11160409
+   > block timestamp:     1651160747
    > account:             0x0659f79530111c8b584af5EF499c4AfeD79a04DF
-   > balance:             5.997212372719476753
+   > balance:             15.994621759219476753
    > gas used:            186963 (0x2da53)
    > gas price:           0.5 gwei
    > value sent:          0 ETH
@@ -145,29 +145,29 @@ Starting migrations...
 2_deploy_airdrop.js
 ===================
 
-   Replacing 'Airdrop'
+   Deploying 'Airdrop'
    -------------------
-   > transaction hash:    0x4316900454594ef2ddf807f4c8a6c76412c9952dfc2b3581ae46cef8ded7c264
-   > Blocks: 1            Seconds: 4
-   > contract address:    0x23047531b51eE8Cb044AF18B87365B9De1DF5aF7
-   > block number:        11041295
-   > block timestamp:     1650565028
+   > transaction hash:    0xec7fedd24acad3d7efdcccb7e481c163393257ad87ba0bb1db5ae2c3bab34828
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x6cA1217BdA63ff36c37F48516803015138D66cE6
+   > block number:        11160411
+   > block timestamp:     1651160757
    > account:             0x0659f79530111c8b584af5EF499c4AfeD79a04DF
-   > balance:             5.996972759219476753
-   > gas used:            436092 (0x6a77c)
+   > balance:             15.994376757219476753
+   > gas used:            446869 (0x6d195)
    > gas price:           0.5 gwei
    > value sent:          0 ETH
-   > total cost:          0.000218046 ETH
+   > total cost:          0.0002234345 ETH
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:         0.000218046 ETH
+   > Total cost:        0.0002234345 ETH
 
 Summary
 =======
 > Total deployments:   2
-> Final cost:          0.0003115275 ETH
+> Final cost:          0.000316916 ETH
 ```
 
 (Don't clear your terminal 👀)
@@ -183,7 +183,7 @@ Next, we need to fund the contract
 
 Get the contract address from the output of the command you ran in step 4
 
-> In the above example, that would be 0x23047531b51eE8Cb044AF18B87365B9De1DF5aF7
+> In the above example, that would be 0x6cA1217BdA63ff36c37F48516803015138D66cE6
 
 If you are using a token other than Celo or one of it's stable coins, you'll need to send a sufficient amount to that address to accommodate for this airdrop. Otherwise, head back over to the [Alfajores faucet](https://celo.org/developers/faucet) and fund the contract address.
 
@@ -202,7 +202,7 @@ To claim for every address specified in the eligibility list, run the following 
 To claim for only one specified address, just add the **-a** flag followed by the address e.g.
 
 ```
- ts-node scripts/contract-interaction/claim-airdrop.ts -i generated-merkle-root.json -a 0x0659f79530111c8b584af5EF499c4AfeD79a04DF
+ ts-node scripts/contract-interaction/claim-airdrop.ts -i generated-merkle-root.json -a 0x6cA1217BdA63ff36c37F48516803015138D66cE6
 ```
 
 You can now navigate to [blockscout](https://alfajores-blockscout.celo-testnet.org/), paste the address you claimed the tokens for, and see the transaction which claimed the tokens!
