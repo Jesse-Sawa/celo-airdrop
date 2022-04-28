@@ -5,7 +5,6 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/cryptography/MerkleProof.sol";
 import "./interfaces/IMerkleDistributor.sol";
 
-
 contract Airdrop is IMerkleDistributor {
     address public immutable override token;
     bytes32 public immutable override merkleRoot;
@@ -20,7 +19,6 @@ contract Airdrop is IMerkleDistributor {
         merkleRoot = merkleRoot_;
     }
     
-
     function isClaimed(uint256 index) public view override returns (bool) {
         uint256 claimedWordIndex = index / 256;
         uint256 claimedBitIndex = index % 256;
@@ -43,4 +41,8 @@ contract Airdrop is IMerkleDistributor {
         require(IERC20(token).transfer(account, amount), 'MerkleDistributor: Transfer failed.');
         emit Claimed(index, account, amount);
     }
+
+    receive() external payable {
+            // React to receiving ether
+        }
 }

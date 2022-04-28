@@ -46,7 +46,7 @@ async function beginAirdrop() {
   }
 }
 
-async function claimAllErc20(contractInstance) {
+async function claimAllErc20(contractInstance: any) {
   try {
     kit.connection.addAccount(process.env.PRIVATE_KEY);
     const contractCreaterAddress = privateKeyToAddress(process.env.PRIVATE_KEY);
@@ -77,12 +77,10 @@ async function claimAllErc20(contractInstance) {
   }
 }
 
-async function claimErc20ForAddress(contractInstance, address) {
+async function claimErc20ForAddress(contractInstance: any, address: string) {
   try {
     kit.connection.addAccount(process.env.PRIVATE_KEY);
     const contractCreaterAddress = privateKeyToAddress(process.env.PRIVATE_KEY);
-
-    console.log(address);
 
     const addressClaimDetails = json.claims[address];
 
